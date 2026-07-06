@@ -17,6 +17,14 @@
 **技术栈**：Python / Pandas / OpenAI SDK / Regex / Matplotlib
 
 **项目价值**：为医疗 AI 的“算法审计”提供了可迁移的评估框架，可应用于临床试验患者分层、药物不良反应监测等场景。
+
+## Next Steps / Future Work
+
+- **PyTorch 迁移**：计划将现有数据分析流程迁移到 PyTorch Tensor，利用 GPU 加速处理更大规模的医疗数据集
+- **LoRA 微调**：探索使用 QLoRA 对 7B 开源模型进行医疗分诊任务的微调，降低 API 调用成本
+- **SQL 数据库**：将 CSV 数据迁移到 SQLite/PostgreSQL，模拟真实临床数据库查询场景
+- **可解释性**：引入 SHAP 值分析，量化每个特征（年龄/性别/症状）对模型决策的贡献。
+- 
 This project addresses an emerging ethical concern: **can large language models be safely and fairly used for emergency triage decisions?**  
 We constructed a small but structured benchmark of 45 real‑world clinical vignettes (covering emergency, non‑emergency, and self‑care levels) and generated **3 demographic variants** (age, sex, insurance status) for 10 representative cases to systematically evaluate two commercial LLMs on triage tasks.
 
