@@ -6,7 +6,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
+## 项目简介（中文）
 
+本项目构建了一个 **LLM 医疗急诊分诊评估基准（Benchmark）**，旨在评估 DeepSeek 和 Kimi 两个大语言模型在急诊分诊任务中的**准确性、安全性和公平性**。
+
+**核心发现**：
+- 所有模型的**低分诊率（Under-triage Rate）均为 0%** —— 不会遗漏真正的急症患者
+- 加入人口统计学信息（年龄/性别/保险）后，部分模型的准确率反而下降 —— 提示模型存在**性别偏见**
+
+**技术栈**：Python / Pandas / OpenAI SDK / Regex / Matplotlib
+
+**项目价值**：为医疗 AI 的“算法审计”提供了可迁移的评估框架，可应用于临床试验患者分层、药物不良反应监测等场景。
 This project addresses an emerging ethical concern: **can large language models be safely and fairly used for emergency triage decisions?**  
 We constructed a small but structured benchmark of 45 real‑world clinical vignettes (covering emergency, non‑emergency, and self‑care levels) and generated **3 demographic variants** (age, sex, insurance status) for 10 representative cases to systematically evaluate two commercial LLMs on triage tasks.
 
